@@ -14,9 +14,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        val classRoom = findViewById<Button>(R.id.button5)
-        classRoom.setOnClickListener {
-            val intent = Intent(this, SecondActivity::class.java)
+        val classroomButton = findViewById<Button>(R.id.button5)
+        val cardviewButton = findViewById<Button>(R.id.button6)
+        classroomButton.setOnClickListener {
+            var intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
+        cardviewButton.setOnClickListener {
+            var intent = Intent(this, ThirdActivity::class.java)
             startActivity(intent)
         }
     }
